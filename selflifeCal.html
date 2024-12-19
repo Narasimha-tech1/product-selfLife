@@ -118,8 +118,8 @@
             resultDiv.style.display = "none";
             errorDiv.style.display = "none";
             
-            if (billingDate > today) {
-                errorDiv.textContent = "Error: billing Date must be earlier or today.";
+            if (billingDate > today || billingDate <= (today-10)) {
+                errorDiv.textContent = "Error: billing Date must be before 10 days or today.";
                 errorDiv.style.display = "block";
                 return;
             }
